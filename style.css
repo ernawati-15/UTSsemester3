@@ -1,0 +1,496 @@
+
+/* ==============================
+   1. PENGATURAN DASAR
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f8f3;
+    color: #26352a;
+    line-height: 1.6;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+.btn {
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #82bd91;
+    outline-offset: 3px;
+}
+
+/* ==============================
+   2. NAVBAR
+============================== */
+
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5ebdf;
+    padding: 15px 0;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #287a42;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.navbar nav a {
+    color: #536257;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #287a42;
+    font-weight: bold;
+}
+
+/* ==============================
+   3. TOMBOL
+============================== */
+
+.btn {
+    display: inline-block;
+    padding: 11px 18px;
+    min-height: 42px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #287a42;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1d6033;
+}
+
+.btn-secondary {
+    background-color: #e9eee8;
+    color: #344438;
+}
+
+.btn-secondary:hover {
+    background-color: #dce5da;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* ==============================
+   4. HALAMAN LOGIN
+============================== */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #e8f5e9, #f7faf4);
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-card {
+    background-color: white;
+    padding: 25px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(31, 75, 42, 0.09);
+    text-align: center;
+}
+
+.login-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.login-card h1 {
+    color: #287a42;
+    font-size: 28px;
+}
+
+.login-subtitle {
+    color: #788579;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.login-card .form-group {
+    text-align: left;
+}
+
+.login-error {
+    color: #d32f2f;
+    font-size: 13px;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.login-note {
+    color: #8a958b;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* ==============================
+   5. JUDUL HALAMAN
+============================== */
+
+.page-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 30px 0 22px;
+}
+
+.page-heading h1 {
+    font-size: 25px;
+    color: #263b2b;
+}
+
+.page-heading p {
+    color: #7b887d;
+    font-size: 14px;
+}
+
+.eyebrow {
+    color: #287a42 !important;
+    font-size: 11px !important;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+
+/* ==============================
+   6. INPUT DAN FORM
+============================== */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: #394a3d;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 12px;
+    border: 1px solid #dce4da;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #26352a;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #287a42;
+    box-shadow: 0 0 0 3px rgba(40, 122, 66, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.form-page {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.form-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 13px;
+    box-shadow: 0 4px 20px rgba(31, 75, 42, 0.05);
+    margin-bottom: 35px;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.error-message {
+    display: block;
+    color: #d32f2f;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* ==============================
+   7. PENCARIAN DAN FILTER
+============================== */
+
+.filter-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    background-color: white;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+/* ==============================
+   8. KARTU PRODUK
+============================== */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 35px;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #e7ede5;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(31, 75, 42, 0.04);
+}
+
+.product-emoji {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.product-category {
+    display: inline-block;
+    background-color: #eaf5eb;
+    color: #287a42;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 19px;
+    margin-bottom: 7px;
+    color: #293d2e;
+}
+
+.product-description {
+    color: #7b887d;
+    font-size: 13px;
+    min-height: 40px;
+    margin-bottom: 12px;
+}
+
+.product-price {
+    color: #287a42;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-stock {
+    font-size: 13px;
+    color: #7b887d;
+    margin-bottom: 17px;
+}
+
+.product-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit {
+    background-color: #e9f1ff;
+    color: #2862a8;
+    flex: 1;
+}
+
+.btn-delete {
+    background-color: #fff0ef;
+    color: #c33d35;
+    flex: 1;
+}
+
+.empty-message {
+    background-color: white;
+    text-align: center;
+    padding: 30px 18px;
+    border-radius: 10px;
+    color: #7b887d;
+    margin-bottom: 35px;
+}
+
+/* ==============================
+   9. FOOTER
+============================== */
+
+.footer {
+    text-align: center;
+    padding: 22px;
+    color: #879187;
+    font-size: 12px;
+    background-color: white;
+    border-top: 1px solid #e5ebdf;
+}
+
+/* ==============================
+   10. RESPONSIVE TABLET
+============================== */
+
+@media (min-width: 600px) {
+
+    .nav-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .page-heading {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+
+    .form-actions {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .form-actions .btn {
+        min-width: 110px;
+    }
+
+    .filter-section {
+        grid-template-columns: 2fr 1fr;
+        padding: 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .form-card {
+        padding: 30px;
+    }
+
+    .login-card {
+        padding: 35px;
+    }
+}
+
+/* ==============================
+   11. RESPONSIVE LAPTOP
+============================== */
+
+@media (min-width: 900px) {
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .page-heading h1 {
+        font-size: 30px;
+    }
+}
+
+/* ==============================
+   12. PENGATURAN ANIMASI
+============================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

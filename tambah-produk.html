@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Form untuk menambahkan produk pertanian ke katalog KebunKita.">
+    <title>Tambah Produk | KebunKita</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-content">
+
+            <a href="katalog.html" class="logo" aria-label="KebunKita - Halaman Katalog">
+                🌱 KebunKita
+            </a>
+
+            <nav aria-label="Navigasi utama">
+                <a href="katalog.html">Katalog</a>
+                <a href="tambah-produk.html" class="active" aria-current="page">
+                    Tambah Produk
+                </a>
+                <a href="index.html">Logout</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="container form-page">
+
+        <section class="page-heading" aria-labelledby="judul-form">
+            <div>
+                <p class="eyebrow">KEBUNKITA</p>
+                <h1 id="judul-form">Tambah Produk</h1>
+                <p>Masukkan informasi produk pertanian.</p>
+            </div>
+        </section>
+
+        <section class="form-card" aria-label="Form data produk">
+
+            <form id="product-form">
+
+                <div class="form-group">
+                    <label for="nama">Nama Produk</label>
+                    <input
+                        type="text"
+                        id="nama"
+                        name="nama"
+                        placeholder="Contoh: Tomat Segar"
+                        aria-describedby="error-nama"
+                    >
+                    <small
+                        id="error-nama"
+                        class="error-message"
+                    ></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="kategori">Kategori</label>
+                    <select
+                        id="kategori"
+                        name="kategori"
+                        aria-describedby="error-kategori"
+                    >
+                        <option value="">Pilih Kategori</option>
+                        <option value="Sayuran">Sayuran</option>
+                        <option value="Buah">Buah</option>
+                        <option value="Biji-bijian">Biji-bijian</option>
+                        <option value="Umbi-umbian">Umbi-umbian</option>
+                    </select>
+                    <small
+                        id="error-kategori"
+                        class="error-message"
+                    ></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="satuan">Satuan</label>
+                    <input
+                        type="text"
+                        id="satuan"
+                        name="satuan"
+                        placeholder="Contoh: Kg, Ikat, Buah"
+                        aria-describedby="error-satuan"
+                    >
+                    <small
+                        id="error-satuan"
+                        class="error-message"
+                    ></small>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="harga">Harga (Rp)</label>
+                        <input
+                            type="number"
+                            id="harga"
+                            name="harga"
+                            min="1"
+                            step="1"
+                            placeholder="Contoh: 15000"
+                            aria-describedby="error-harga"
+                        >
+                        <small
+                            id="error-harga"
+                            class="error-message"
+                        ></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stok">Stok</label>
+                        <input
+                            type="number"
+                            id="stok"
+                            name="stok"
+                            min="0"
+                            step="1"
+                            placeholder="Contoh: 50"
+                            aria-describedby="error-stok"
+                        >
+                        <small
+                            id="error-stok"
+                            class="error-message"
+                        ></small>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi Produk</label>
+                    <textarea
+                        id="deskripsi"
+                        name="deskripsi"
+                        rows="4"
+                        placeholder="Tuliskan deskripsi produk..."
+                    ></textarea>
+                </div>
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        id="tombol-batal"
+                        class="btn btn-secondary"
+                    >
+                        Batal
+                    </button>
+
+                    <button
+                        type="submit"
+                        id="tombol-simpan"
+                        class="btn btn-primary"
+                    >
+                        Simpan Produk
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 KebunKita. Katalog Produk UMKM Pertanian.</p>
+    </footer>
+
+    <script type="module" src="assets/js/main.js"></script>
+
+</body>
+</html>

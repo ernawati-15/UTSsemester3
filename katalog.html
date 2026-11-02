@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Katalog produk hasil pertanian UMKM di KebunKita.">
+    <title>Katalog Produk | KebunKita</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-content">
+
+            <a href="katalog.html" class="logo" aria-label="KebunKita - Halaman Katalog">
+                🌱 KebunKita
+            </a>
+
+            <nav aria-label="Navigasi utama">
+                <a href="katalog.html" class="active" aria-current="page">
+                    Katalog
+                </a>
+                <a href="tambah-produk.html">
+                    Tambah Produk
+                </a>
+                <a href="index.html">
+                    Logout
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading" aria-labelledby="judul-katalog">
+            <div>
+                <p class="eyebrow">KATALOG UMKM PERTANIAN</p>
+                <h1 id="judul-katalog">Daftar Produk</h1>
+                <p>Temukan berbagai hasil pertanian pilihan.</p>
+            </div>
+
+            <a href="tambah-produk.html" class="btn btn-primary">
+                + Tambah Produk
+            </a>
+        </section>
+
+        <section class="filter-section" aria-label="Pencarian dan filter produk">
+
+            <div class="form-group">
+                <label for="search">Cari Produk</label>
+                <input
+                    type="search"
+                    id="search"
+                    name="search"
+                    placeholder="Cari nama produk..."
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="filter-kategori">Filter Kategori</label>
+                <select id="filter-kategori" name="kategori">
+                    <option value="">Semua Kategori</option>
+                    <option value="Sayuran">Sayuran</option>
+                    <option value="Buah">Buah</option>
+                    <option value="Biji-bijian">Biji-bijian</option>
+                    <option value="Umbi-umbian">Umbi-umbian</option>
+                </select>
+            </div>
+
+        </section>
+
+        <section aria-label="Daftar produk pertanian">
+
+            <div
+                id="daftar-produk"
+                class="product-grid"
+                aria-live="polite"
+            ></div>
+
+            <p
+                id="pesan-kosong"
+                class="empty-message"
+                role="status"
+                hidden
+            >
+                Produk tidak ditemukan.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 KebunKita. Katalog Produk UMKM Pertanian.</p>
+    </footer>
+
+    <script type="module" src="assets/js/main.js"></script>
+
+</body>
+</html>

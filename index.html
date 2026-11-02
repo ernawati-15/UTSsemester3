@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Halaman login Sistem Katalog Produk UMKM Pertanian KebunKita.">
+
+    <title>Login | KebunKita</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="module" src="assets/js/main.js"></script>
+</head>
+
+<body class="login-page">
+
+    <main class="login-container">
+        <section class="login-card" aria-labelledby="judul-login">
+
+            <div class="login-icon" aria-hidden="true">🌱</div>
+
+            <h1 id="judul-login">KebunKita</h1>
+
+            <p class="login-subtitle">
+                Sistem Katalog Produk UMKM Pertanian
+            </p>
+
+            <form id="login-form">
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Masukkan username"
+                        autocomplete="username"
+                        required
+                        aria-describedby="pesan-login"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Masukkan password"
+                        autocomplete="current-password"
+                        required
+                        aria-describedby="pesan-login"
+                    >
+                </div>
+
+                <p
+                    id="pesan-login"
+                    class="login-error"
+                    role="alert"
+                    aria-live="polite"
+                ></p>
+
+                <button type="submit" class="btn btn-primary btn-full">
+                    Login
+                </button>
+
+            </form>
+
+            <p class="login-note">
+                Selamat datang di KebunKita 🌿
+            </p>
+
+        </section>
+    </main>
+
+    <script>
+        const loginForm = document.getElementById("login-form");
+        const pesanLogin = document.getElementById("pesan-login");
+
+        console.log("Halaman login berhasil dijalankan!");
+
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "erna" && password === "erna123") {
+                window.location.href = "katalog.html";
+            } else {
+                pesanLogin.textContent = "Username atau password salah!";
+            }
+        });
+    </script>
+
+</body>
+</html>
